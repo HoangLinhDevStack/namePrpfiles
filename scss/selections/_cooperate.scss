@@ -1,0 +1,28 @@
+@use '../components/mixins.scss' as *;
+@use '../components/valuables.scss' as *;
+
+.cooperate {
+    padding-bottom: 80px;
+
+    &__title::after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 50%;
+        @include PrimaryBackgroundColor;
+        margin: auto;
+        border-radius: 5px;
+    }
+
+    &__cmp {
+        width: 100%;
+        height: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    &__cmp > img {
+        height: 100%;
+        padding: 5px;
+    }
+
+}

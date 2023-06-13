@@ -1,0 +1,114 @@
+@use '../components/mixins.scss' as *;
+@use '../components/valuables.scss' as *;
+
+.footer {
+    padding-top: 1rem;
+    background-color: rgb(21, 20, 20);
+
+    &__contacts {
+
+
+        &-logo {
+            margin-bottom: 17px;
+            font-size: 50px;
+            color: $primary-Color;
+        }
+
+        &-infors {
+
+            & > h3 {
+                margin-bottom: 0;
+                transition: all 0.3s ease;
+                cursor: pointer;
+
+                &:hover {
+                    color: $primary-Color;
+                }
+            }
+
+            & > p {
+                opacity: 0.5;
+            }
+        }
+
+    }
+
+
+    &__medias {
+        background-color: #212121;
+        padding: 24px 0;
+
+        &-texts {
+
+            & > p {
+                margin: 0;
+                opacity: 0.5;
+            }
+        }
+
+        &-icons > i{
+            font-size: 30px;
+            padding-right: 8px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                cursor: pointer;
+                color: $primary-Color;
+            }
+        }
+
+
+    }
+
+    &__company {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        &-intro {
+            margin-left: 32px;
+        }
+
+        &-infors {
+
+            & > ul {
+
+            }
+
+            & > ul > h4 {
+                margin-bottom: 15px;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    height: 2px;
+                    width: 30%;
+                    @include WhiteBackgroundColor;
+                    margin: 8px 0;
+                    opacity: 0.5;
+                }
+            }
+            
+            & > ul > li {
+                list-style: none;
+                margin-top: 8px;
+            }
+        }
+    }
+
+    .footer__license {
+        padding: 50px;
+
+        & > small {
+            opacity: 0.5;
+        }
+
+        & > small > a {
+            text-decoration: none;
+
+            &:hover {
+                color: $primary-Color;
+                text-decoration: underline;
+            }
+        }
+    }
+}

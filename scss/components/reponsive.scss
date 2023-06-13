@@ -1,0 +1,7 @@
+$breakpoint-992px: 992px;
+
+@mixin reponsive-down($breakpoint) {
+    @media(max-width: $breakpoint) {
+        @content;
+    }
+}

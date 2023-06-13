@@ -1,0 +1,62 @@
+@use '../components/mixins.scss' as *;
+@use '../components/valuables.scss' as *;
+@use '../components/reponsive.scss' as *;
+
+.introduce {
+    padding-top: 10rem;
+    @include PrimaryBackgroundColor;
+
+    &__title > h1{
+        font-weight: 700;
+        font-size: 70px;
+    }
+
+    &__para > p {
+        font-size: 18px;
+    }
+
+    &__img {
+        text-align: right;
+    }
+
+    @include reponsive-down($breakpoint-992px) {
+        &__img {
+            text-align: center!important;
+        }
+    }
+
+    &__btn {
+        display: inline-block;
+        border: 1px solid $fff-Color;
+        font-size: 20px;
+        border-radius: 30px;
+        padding: 7px;
+        color: $secondary-Color;
+        transition: all 0.5s ease;
+        cursor: pointer;
+
+        &-first {
+            display: inline-block;
+        }
+
+        &-click {
+            display: none;
+        }
+
+        &:hover {
+            @include TransparancyBackGround;
+
+            .introduce__btn-first {
+                display: none;
+            }
+
+            .introduce__btn-click {
+                display: inline-block;
+                color: $fff-Color;
+            }
+
+        }
+    }
+
+
+}

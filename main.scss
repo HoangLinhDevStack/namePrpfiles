@@ -1,0 +1,24 @@
+//* components
+@use './scss/components/mixins.scss';
+@use './scss/components/valuables.scss';
+
+
+
+//* selections 
+@use './scss/selections/header';
+@use './scss/selections/introduce';
+@use './scss/selections/cooperate';
+@use './scss/selections/technologys';
+@use './scss/selections/speak';
+@use './scss/selections/questions';
+@use './scss/selections/sections';
+@use './scss/selections/validate';
+@use './scss/selections/footer';
+
+//* reponsives 
+@use './scss/components/reponsive.scss'; 
+
+body {
+    overflow-x: hidden;
+}
+

@@ -1,0 +1,55 @@
+@use '../components/mixins.scss' as *;
+@use '../components/valuables.scss' as *;
+
+.head {
+    position: fixed;
+    z-index: 99;
+    
+    &__nav {
+        transition: all 0.5s ease-in-out;
+        @include PrimaryBackgroundColor;
+        
+        &-logo {
+            font-size: 25px;
+            color: $fff-Color;
+            padding-right: 5px;
+        }
+
+        &-contact {
+            display: block;
+            border: 1px solid $fff-Color;
+            font-size: 20px;
+            border-radius: 30px;
+            padding: 7px;
+            color: $secondary-Color;
+            transition: all 0.3s ease;
+
+            &--animation {
+                display: inline-block;
+                background-color: $secondary-Color;
+                padding: 3px;
+                border-radius: 50%;
+                color: $fff-Color;
+                transition: all 0.3s ease;
+            }
+
+            &--animationNext {
+                display: none;
+            }
+
+            &:hover {
+                @include TransparancyBackGround;
+
+                .head__nav-contact--animation {
+                    transform: translateX(-100px);
+
+                }
+
+                .head__nav-contact--animationNext {
+                    display: inline-block;
+                    color: $fff-Color;
+                }
+            }
+        }
+    }
+}

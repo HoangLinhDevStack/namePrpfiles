@@ -1,0 +1,102 @@
+@use '../components/mixins.scss' as *;
+@use '../components/valuables.scss' as *;
+
+.technologys {
+    padding-top: 18px;
+
+    &__title > h1{
+        font-size: 50px;
+        font-weight: 700;  
+        margin-bottom: 8px;
+
+        &::after {
+            content: '';
+            display: block;
+            margin: auto;
+            height: 3px;
+            width: 50%;
+            margin-top: 12px;
+            border-radius: 30px;
+            @include PrimaryBackgroundColor
+        }
+    }
+
+    &__para {
+        
+        &-border {
+            border-right: 0.1rem solid $primary-Color;
+        }
+    }
+
+    &__tools {
+        margin-top: 10rem;
+
+        &-icon > i {
+            font-size: 2.5rem;
+            color: $primary-Color;
+        }
+
+        &-title {
+            display: inline-block;
+            color: $transparent-Color;
+            background-clip: text;
+            background-image: linear-gradient(90deg, #0093E9 0%, #80D0C7 100%);
+            
+        }
+
+        &-para > p {
+            font-size: 1rem;
+        }
+
+        &-btn {
+            display: flex;
+            justify-content: center;
+            border: 1px solid #fff;
+            font-size: 20px;
+            border-radius: 30px;
+            padding: 12px;
+            color: #0093E9;
+            transition: all 0.5s ease;
+            cursor: pointer;
+
+            &__click {
+                padding-right: 8px;
+                font-weight: 600;
+                transition: all 0.5s ease;
+
+            }
+
+            &__icon {
+                transition: all 0.5s ease;
+                
+
+                &-in {
+                    display: block;
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 50%;
+                    background-color: $secondary-Color;
+                    transition: all 0.5s ease;
+
+                }
+            }
+
+            &:hover {
+                color: $fff-Color;
+                @include PrimaryBackgroundColor;
+                transition: all 0.5s ease;
+
+                .technologys__tools-btn__click {
+                    transform: translateX(35px);
+                    transition: all 0.5s ease;
+                }
+
+                .technologys__tools-btn__icon {
+                    transform: translateX(-115px);
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+    }
+
+}
